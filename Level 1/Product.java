@@ -1,0 +1,30 @@
+public class Product{
+
+	String productName;
+	int price;
+	static int totalProducts;
+	
+	Product(String productName, int price){
+		this.productName = productName;
+		this.price = price;
+		totalProducts++;
+	}
+	
+	void displayProductDetails(){
+		System.out.println(productName);
+		System.out.println(price);
+	}
+	
+	void displayTotalProducts(){
+		System.out.println(totalProducts);
+	}
+
+	public static void main(String[] args){
+		Product p1 = new Product("Milk", 34);
+		Product p2 = new Product("Lays", 50);
+		
+		p1.displayProductDetails();
+		p2.displayProductDetails();
+		p1.displayTotalProducts();
+	}
+}
